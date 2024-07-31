@@ -1,0 +1,402 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: border-box;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@font-face {
+    font-family: hero;
+    src: url("Bangers-Regular.ttf");
+}
+
+.sign{
+    z-index: 10000;
+    position: fixed;
+    display: none;
+    transition: all 0.2s;
+    height: 100px;
+    width: 100px;
+}
+
+.snh{
+    display: block;
+}
+
+.cursor0{
+    background-image: url('images/pow.png');
+    background-size: cover;
+}
+
+.cursor1{
+    background-size: cover;
+    background-image: url('images/boom.png');
+}
+
+.cursor2{
+    background-size: cover;
+    background-image: url('images/bang.png');
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background-color: black;
+}
+
+h1{
+    font-size: 70px;
+    font-family: hero;
+    font-weight: 400;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+    max-width: 100vw;
+}
+
+.dex{
+    color: crimson;
+}
+
+.head{
+    display: flex;
+}
+
+.head a{
+    display: flex;
+    text-decoration: none;
+    letter-spacing: 4px;
+}
+
+#nav-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+}
+
+form{
+    padding: 0.75rem 2rem;
+    /* outline: none; */
+    border-radius: 50px;
+    /* font-size: 1rem; */
+    background-color: transparent;
+    border: 2px solid gray;
+    color: white;
+    max-width: 100%;
+    position: relative;
+}
+
+#search{
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    max-width: 100%;
+    background-color: transparent;
+}
+
+#search-btn{
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    max-width: 50%;
+}
+
+.search-list{
+    z-index: 10;
+    position: absolute;
+    top: calc(100% + 0.75rem);
+    left: 0;
+    min-width: 100%;
+    max-height: 420px;
+    overflow-y: scroll;
+}
+
+.search-list-item{
+    display: flex;
+    align-items: center;
+    padding: 0.4rem 0;
+    background-color: black;
+}
+
+.search-list-item img{
+    width: 70px;
+    margin-right: 0.5rem;
+}
+
+.search-list-item p{
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.main-wrapper{
+    height: 100dvh;
+    max-width: 100vw;
+    background-color: black;
+}
+
+.hero-container{
+    height: 40vw;
+    max-width: 100%;
+    /* background-color: beige; */
+    padding: 1.5rem 1rem;
+    margin-bottom: 3rem;
+}
+
+.hero-container h1,.villain-container h1{
+    font-size: 30px;
+    /* text-decoration: underline; */
+}
+
+.card h1{
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.c1{
+    max-width: 100%;
+    height: 45%;
+    display: flex;
+    /* background-color: blue; */
+    margin-top: 1rem;
+}
+
+.c1resp{
+    max-width: 100%;
+    height: 45%;
+    display: flex;
+    /* background-color: blue; */
+    margin-top: 1rem;
+    display: none;
+}
+
+.c2resp{
+    display: none;
+}
+
+.c1resp .card{
+    margin-right: 1rem;
+    width: 24%;
+    /* height: 100%; */
+    background-color: black;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.card{
+    /* margin-top: 0.75rem; */
+    margin-right: 1rem;
+    width: 15%;
+    height: 100%;
+    background-color: black;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.card:hover{
+    scale: 1.1;
+}
+
+.card img{
+    width: 100%;
+    height: 85%;
+}
+
+.villain-container{
+    height: 40vw;
+    max-width: 100%;
+    /* background-color: brown; */
+    padding: 1.5rem 1rem;
+    margin-top: 1rem;
+}
+
+.last{
+    margin-bottom: 1rem;
+}
+
+li{
+    list-style: none;
+}
+
+button{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+}
+
+.tabs{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid gray;
+    border-radius: 2px;
+    padding-bottom: 1.2rem;
+    margin: 1.8rem 0;
+}
+
+.tab{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.tab:hover{
+    opacity: 0.9;
+}
+
+.tab.active-tab::after{
+    content: "";
+    left: 0;
+    width: 100%;
+    position: absolute;
+    background-color: crimson;
+    height: 4px;
+    bottom: -1.2rem;
+}
+
+.main-content{
+    margin: 2rem 2rem;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+.main-content img{
+    width: 90%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.main-content .name{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.stats{
+    display: none;
+}
+
+.stats li{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem auto;
+    padding: 1rem;
+    font-size: 1.4rem;
+    box-shadow: 0 0 10px rgba(77, 77, 77, 0.377);
+}
+
+.stats li div i{
+    color: crimson;
+    font-size: 1.4rem;
+}
+
+.stats li div span{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    padding: 0 1rem;
+    margin: 0 1.2rem;
+    opacity: 0.7;
+    font-size: 1.4rem;
+}
+
+.stats li>span{
+    color: yellow;
+    font-weight: 600;
+}
+
+.biography{
+    display: none;
+}
+
+.biography li{
+    margin: 3rem 0;
+}
+
+.biography li span{
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.biography li span:first-child{
+    color: crimson;
+    font-weight: 600;
+    /* opacity: 0.7; */
+}
+
+.appearance{
+    display: none;
+}
+
+.appearance li{
+    margin: 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.appearance li span{
+    font-size: 1.3rem;
+}
+
+.appearance li span i{
+    color: yellow;
+    font-size: 1.3rem;
+    padding-right: 1rem;
+}
+
+.appearance li span:nth-child(2){
+    background-color: crimson;
+    border-radius: 2rem;
+    padding: 0 1rem;
+    text-align: right;
+}
+
+.connections{
+    display: none;
+}
+
+.connections li{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.connections li span:first-child{
+    color: rgba(255, 255, 0, 0.815);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.connections li span:last-child{
+    margin-top: 0.75rem;
+    margin-bottom: 2rem;
+    font-size: 1.15rem;
+}
+
+.show-tab{
+    display: block;
+}

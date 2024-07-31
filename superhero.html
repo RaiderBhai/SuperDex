@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <title>SuperDex</title>
+</head>
+<body>
+    <div class="sign"></div>
+    <div class="nav">
+        <span class="head"><a href="index.html" class="bangers-regular"><h1>Super</h1><h1 class="dex">Dex</h1></a></span>
+        <div id="nav-right">
+            <form action="" style="display: flex;" class="form-search">
+                <input type="text" name="" placeholder="Search Superhero/Villain" autocomplete="off" id="search">
+                <button type="submit" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <div class="search-list" id="search-list">
+                    <div class="search-list-item">
+                        <!-- <img src="images/thumbnail-batman.jpg" alt="">
+                        <p>Batman</p> -->
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="main-body">
+        <div class="main-content">
+            <div class="image">
+                <img src="images/thumbnail-batman.jpg" alt="">
+            </div>
+            <div class="c-list">
+                <div class="name">Batman</div>
+                <div class="tabs">
+                    <button class="tab" id="1">
+                        <span>Stats</span>
+                    </button>
+                    <button class="tab" id="2">
+                        <span>Biography</span>
+                    </button>
+                    <button class="tab" id="3">
+                        <span>Appearance</span>
+                    </button>
+                    <button class="tab" id="4">
+                        <span>Connections</span>
+                    </button>
+                </div>
+                <div class="tabs-bodies">
+                    <ul class="tab-body stats">
+                        <li>
+                            <div>
+                                <i class="fa-solid fa-dumbbell"></i>
+                                <span>Strength</span>
+                            </div>
+                            <span>26</span>
+                        </li>
+                        <li>
+                            <div>
+                                <i class="fa-solid fa-brain"></i>
+                                <span>Intelligence</span>
+                            </div>
+                            <span>100</span>
+                        </li>
+                        <li>
+                            <div>
+                                <i class="fa-solid fa-person-running"></i>
+                                <span>Speed</span>
+                            </div>
+                            <span>27</span>
+                        </li>
+                        <li>
+                            <div>
+                                <i class="fa-solid fa-hand-fist"></i>
+                                <span>Power</span>
+                            </div>
+                            <span>47</span>
+                        </li>
+                        <li>
+                            <div>
+                                <i class="fa-solid fa-shield"></i>
+                                <span>Durability</span>
+                            </div>
+                            <span>50</span>
+                        </li>
+                        <li>
+                            <div>
+                                <i class="fa-solid fa-khanda"></i>
+                                <span>Combat</span>
+                            </div>
+                            <span>100</span>
+                        </li>
+                    </ul>
+                    <ul class="tab-body biography">
+                        <li>
+                            <span>Full Name: </span>
+                            <span>Bruce Wayne</span>
+                        </li>
+                        <li>
+                            <span>Alter Egos: </span>
+                            <span>No alter egos found</span>
+                        </li>
+                        <li>
+                            <span>Aliases: </span>
+                            <span>Batman II, The Tomorrow Knight, Batman Beyond</span>
+                        </li>
+                        <li>
+                            <span>Place of Birth: </span>
+                            <span>Gotham City</span>
+                        </li>
+                        <li>
+                            <span>First Appearance: </span>
+                            <span>Batman Beyond #1</span>
+                        </li>
+                        <li>
+                            <span>Publishers: </span>
+                            <span>DC comics</span>
+                        </li>
+                    </ul>
+                    <ul class="tab-body appearance">
+                        <li>
+                            <span>
+                                <i class="fa-solid fa-star"></i>Gender
+                            </span>
+                            <span>Male</span>
+                        </li>
+                        <li>
+                            <span>
+                                <i class="fa-solid fa-star"></i>Race
+                            </span>
+                            <span>Human</span>
+                        </li>
+                        <li>
+                            <span>
+                                <i class="fa-solid fa-star"></i>Height
+                            </span>
+                            <span>5' 10'</span>
+                        </li>
+                        <li>
+                            <span>
+                                <i class="fa-solid fa-star"></i>Weight
+                            </span>
+                            <span>170 lb</span>
+                        </li>
+                        <li>
+                            <span>
+                                <i class="fa-solid fa-star"></i>Eye-color
+                            </span>
+                            <span>Blue</span>
+                        </li>
+                        <li>
+                            <span>
+                                <i class="fa-solid fa-star"></i>Hair-color
+                            </span>
+                            <span>Black</span>
+                        </li>
+                    </ul>
+                    <ul class="tab-body connections">
+                        <li>
+                            <span>Group--Affiliation</span>
+                            <span>Batman Family, Justice League Unlimited</span>
+                        </li>
+                        <li>
+                            <span>Relatives</span>
+                            <span>Damian Wayne (son), Dick Grayson (adopted son), Tim Drake (adopted son), Jason Todd (adopted son), Cassandra Cain (adopted ward), Martha Wayne (mother, deceased), Thomas Wayne (father, deceased), Alfred Pennyworth (former guardian), Roderick Kane (grandfather, deceased), Elizabeth Kane (grandmother, deceased), Nathan Kane (uncle, deceased), Simon Hurt (ancestor), Wayne Family</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
